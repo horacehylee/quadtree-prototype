@@ -1,0 +1,31 @@
+{
+  "name": "prototype-quadtree",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "jest --coverage",
+    "start-live": "live-server --verbose --quiet",
+    "start": "lite-server"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.2.2",
+    "browser-sync": "^2.23.6",
+    "chokidar-socket-emitter": "^0.6.0",
+    "jest": "^22.4.3",
+    "lite-server": "^2.3.0",
+    "live-server": "^1.2.0",
+    "plugin-typescript": "^8.0.0",
+    "systemjs-hot-reloader": "^1.1.0",
+    "ts-jest": "^22.4.2",
+    "typescript": "^2.6.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]
+  },
+  "dependencies": {
+    "systemjs": "0.19"
+  }
+}

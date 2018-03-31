@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.12/p5.js"></script>
+    <script src="node_modules/systemjs/dist/system.js"></script>
+    <script>
+        System.config({
+            packages: {
+                '': {
+                    defaultExtension: 'ts'
+                },
+                "ts": {
+                    "main": "lib/plugin.js"
+                },
+                "typescript": {
+                    "main": "lib/typescript.js",
+                    "meta": {
+                        "lib/typescript.js": {
+                        "exports": "ts"
+                        }
+                    }
+                },
+                "systemjs-hot-reloader": {
+                    "main": "dist/index.js"
+                },
+                "systemjs-hmr": {
+                    "main": "dist/systemjs-hmr.js"
+                }
+            },
+            map: {
+                "ts": "node_modules/plugin-typescript",
+                "typescript": "node_modules/typescript",
+                "systemjs-hot-reloader": "node_modules/systemjs-hot-reloader",
+                "systemjs-hmr": "node_modules/systemjs-hmr"
+            },
+            transpiler: 'ts'
+        });
+        System
+            .import('sketch.ts')
+            .then(null, console.error.bind(console));
+    </script>
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+    </style>
+    <script>
+</script>
+</head>
+
+<body>
+</body>
+
+</html>
